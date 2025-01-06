@@ -23,6 +23,13 @@
 		<title>Blogs</title>
 	</head>
 	<body class="font-iyn">
+		<!-- red banner -->
+	<div class="flex !z-50 justify-center items-center w-full h-20 bg-red-600 text-white font-bold relative redBanner">
+		<span>
+			این متن تست هستش بدلیل نوسان ارز با ما تماس بگیرید.
+		</span>
+		<button class="absolute right-10 text-white closeRedBanner">X</button>
+	</div>
 		<!-- Navbar with Sidebar on Mobile -->
 		<nav class="first-nav">
 			<label
@@ -1343,13 +1350,18 @@
 									"items-start",
 									"gap-3.5",
 									"w-full",
+										'relative'
 								);
 
 								const aImage = document.createElement("a");
 								aImage.href = "blog1.html";
+								aImage.classList.add('relative')
 
 								const aTitle = document.createElement("a");
 								aTitle.href = "blog1.html";
+
+								// const imgDiv = document.createElement('div')
+								// div.classList.add("w-full", )
 
 								const img = document.createElement("img");
 								img.src = post.image;
@@ -1362,6 +1374,15 @@
 									"transition-all",
 									"duration-300",
 								);
+
+								const date = document.createElement('div')
+								date.classList.add('flex', 'flex-row', 'items-center', 'absolute', 'gap-1', 'px-3', 'py-1', 'bg-gray-800', 'text-white', '!bottom-2.5', '!left-2.5', '!z-50')
+								const span1 = document.createElement('span')
+								const span2 = document.createElement('span')
+								span1.innerHTML = '21'
+								span2.innerHTML = 'خرداد'
+								date.append(span1, span2)
+
 
 								const title = document.createElement("h3");
 								title.innerText = post.title;
@@ -1377,7 +1398,7 @@
 								title.style.WebkitLineClamp = "2";
 								title.style.WebkitBoxOrient = "vertical";
 
-								aImage.appendChild(img);
+								aImage.append(img, date);
 								aTitle.appendChild(title);
 
 								div.appendChild(aImage);
@@ -1404,6 +1425,12 @@
 						});
 					});
 			}
+
+			const closeRedBanner = document.querySelector('.closeRedBanner')
+			const redBanner = document.querySelector('.redBanner')
+			closeRedBanner.addEventListener('click', () => {
+				redBanner.style.display = 'none'
+			})
 
 			// Function to create skeleton loading elements
 			function createSkeletons(count) {

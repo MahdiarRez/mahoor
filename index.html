@@ -2221,9 +2221,9 @@
 		</div>
 		<!-- Gallery -->
 		<div class="widget-container">
-			<div class="gallery swiper fiveItem-slider">
+			<div class="gallery swiper fiveItem-slider relative">
 				<h2 class="text-xl text-center pb-8">گالری</h2>
-				<div class="gallery-items swiper-wrapper">
+				<div class="gallery-items swiper-wrapper ">
 					<img
 						class="animate-skeletonLoading swiper-slide"
 						loading="lazy"
@@ -2271,8 +2271,8 @@
 						alt=""
 						onload="this.classList.remove('animate-skeletonLoading')" />
 				</div>
-				<div class="swiper-button-next !left-0 swiper-buttons"></div>
-				<div class="swiper-button-prev !right-0 swiper-buttons"></div>
+				<div class="swiper-button-next !top-1/2 !translate-y-1/2 !left-1.5 swiper-buttons !px-3" id="swiperBtn"></div>
+				<div class="swiper-button-prev !top-1/2 !translate-y-1/2 !right-1.5 swiper-buttons !px-3" id="swiperBtn1"></div>
 			</div>
 		</div>
 		<!-- Social Media (Aparat) -->

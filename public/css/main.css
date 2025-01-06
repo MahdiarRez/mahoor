@@ -180,6 +180,11 @@ strong {
 .swiper-buttons {
 	@apply !text-gray9 !w-2 px-6;
 }
+
+.swiperGallery-buttons {
+	@apply !text-gray9 !w-1 px-4;
+}
+
 .highsales {
 	@apply h-auto;
 }
@@ -635,4 +640,12 @@ strong {
 	100% {
 		background-color: #e0e0e0;
 	}
+}
+
+
+#swiperBtn::after {
+	font-size: 2rem;
+}
+#swiperBtn1::after {
+	font-size: 2rem;
 }
